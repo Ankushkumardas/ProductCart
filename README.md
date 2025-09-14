@@ -1,69 +1,86 @@
-# React + TypeScript + Vite
+# 🛒 ProductCart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern, lightweight shopping cart application built with **React**, **TypeScript**, and **Vite**.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-18-blue?logo=react)  
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)  
+![Vite](https://img.shields.io/badge/Vite-4-646CFF?logo=vite)  
+![License](https://img.shields.io/badge/License-MIT-green)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📑 Table of Contents
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [✨ Overview](#-overview)
+- [🎯 Features](#-features)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🚀 Getting Started](#-getting-started)
+  - [📋 Prerequisites](#-prerequisites)
+  - [⚡ Installation](#-installation)
+  - [▶ Running Locally](#-running-locally)
+- [📂 Project Structure](#-project-structure)
+- [🔎 How It Works](#-how-it-works)
+- [📜 Scripts](#-scripts)
+- [💡 Potential Improvements](#-potential-improvements)
+- [📄 License](#-license)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ✨ Overview
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**ProductCart** is a simple and efficient cart system that demonstrates how to:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Display products
+- Add/remove items to/from a cart
+- Update quantities
+- Automatically remove items when their quantity reaches zero
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The project leverages **React Hooks** for state management, **TypeScript** for type safety, and **Vite** for blazing-fast development.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🎯 Features
+
+✅ Display a catalog of products  
+✅ Add/remove products from the cart  
+✅ Increase/decrease product quantity  
+✅ Auto-remove item if quantity drops to zero  
+✅ State management with `useState` / `useReducer`  
+✅ Type-safe using TypeScript interfaces  
+✅ Built with clean, reusable components  
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer           | Technology  |
+|-----------------|-------------|
+| **Frontend**    | React + TypeScript |
+| **Build Tool**  | Vite |
+| **Linting**     | ESLint |
+| **Styling**     | CSS / Custom styling |
+| **Others**      | HTML, JS |
+
+---
+
+🔎 How It Works
+
+Add to Cart: Clicking "Add to Cart" updates the cart state.
+
+Update Quantity: Increment/decrement buttons adjust the item count (never below 1).
+
+Remove Item: If quantity reaches zero, the item is automatically removed.
+
+State Management: Uses React hooks with immutable state updates (map, filter).
+
+
+------
+### ⚡ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Ankushkumardas/ProductCart.git
+cd ProductCart
+git clone https://github.com/Ankushkumardas/ProductCart.git
+cd ProductCart
